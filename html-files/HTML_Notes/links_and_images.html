@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homepage</h1>
+    <!-- <a> tag is anchor element, creates a link -->
+    <a>About The Odin Project</a>
+
+    <!-- Plain text as doesn't know where to go, use HTML attribute to give additional info to element, goes in opening tag -->
+    <!-- Made of name and sometimes value, we need href (hypertext reference) to show where to go -->
+
+    <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+
+    <!-- Above opens link on same tab, below can change where link opened -->
+    <!-- target attribute is location, _blank is blank tab, rel is relationship between current and linked -->
+    <!-- noopener means opened link has no access to webpage that opened it -->
+    <!-- noreferrer stops opened link from knowing what page opened it, no reference, includes noopener behavior -->
+    <!-- This is done for security reasons, noopener stops phising attacks, changing original webpage to different one -->
+    <!-- Okay to not add as browsers also have this security -->
+
+    <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+
+    <!-- Absolute links are links to pages on other websites -->
+    <!-- Made of protocol://domain/path, always includes protol and domain -->
+    <!-- protcol = https, domain = google.com -->
+    <!-- Relative links are links to other pages within website -->
+    <!-- Assumes domain name is same as current -->
+
+    <!-- For relative link, use folder/filename to access -->
+
+    <a href="./about/about.html">About The Odin Project</a>
+
+    <!-- <img> element is self-closing, uses src attribute to tell browser where image file is, like href -->
+
+    <!-- Can get image from website -->
+    <img src="https://www.theodinproject.com/mstile-310x310.png">
+
+    <!-- Can also get from local file -->
+    <img src="./about/dog.jpg">
+
+    <!-- Access parent directory with ../ -->
+    <img src="../html-files/about/dog.jpg">
+
+    <!-- Every image must have alternative text attribute, will be used in case image cant be loaded/screen readers description -->
+    <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo">
+
+    <!-- Can adjust size -->
+    <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="100" width="100">
+
+
+    <!-- Commit Messages: Use subject and body, subject is summary of what did, body is why-->
+    <!-- Commit when meaningful change in code -->
+    <!-- Use active voice in commit "Fix the card generator" -->
+
+</body>
+</html>
