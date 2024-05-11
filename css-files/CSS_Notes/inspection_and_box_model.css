@@ -1,0 +1,52 @@
+/* Inspect element to see webpage HTML/CSS */
+
+
+
+/* Box Model */
+/* Everything on a webpage is a rectangular box */
+/* Boxes have other boxes in them and can sit alongside others */
+/* To see this, use: 
+* {
+  outline: 2px solid red;
+}
+*/
+/* Webpage position is based around nesting these boxes */
+
+/* Box size manipulation with padding, margin, and border */
+/* Padding = space between box border and box content */
+/* Margin = space between box border and other box borders */
+/* Border = space between margin and padding */
+/* These three are properties that can be changed in CSS */
+/* box-sizing = border-box changes the model to alternative */
+/* When alternative, box size including border = width/height, normally not included */
+/* Horizontal centering with auto: 
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+*/
+/* Collapsing margins, for vertical margins, they "collapse" by not adding the margins together */
+/* Instead, the bigger one is chosen */
+/* All margins that are consecutive will collapse (like two consecutive top margins) */
+
+
+
+/* Block and Inline */
+/* Display type changes box model, can modify box calculation with display */
+/* Display changes how HTML elements appear, CSS has 2 types: block and inline */
+
+/* So far, most elements learned default to block */
+/* Block elements appear one stacked on other, each on new line */
+
+/* Inline elements appear in line with elements with elements placed beside */
+/* Example of inline element is <a>, which is a link */
+/* Putting <a> in middle of paragraph, will behave like part of paragraph */
+/* Padding and margin behave differently, usually don't want to modify them */
+
+/* Inline-block elements behave like inline with block padding/margin */
+/* Usually use flexbox */
+
+/* <div> and <span> elements, unlike other elements (<strong> = important text), give no meaning to their content */
+/* Can contain anything, useful for grouping elements under a parent */
+/* div = divide, divides page into blocks to apply styling, defaults to block element */
+/* span = inline div, use when no other element appropriate */

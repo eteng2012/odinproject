@@ -1,0 +1,66 @@
+/* You can do styling for entire body */
+
+/* Not sure what this is */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Added from given */
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background: #aaa;
+    color: #333;
+}
+
+.modal {
+    background: white;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    width: 480px;
+    border-radius: 10px;
+    padding: 12px 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    color: royalblue;
+    font-size: 26px;
+    font-weight: 700;
+    background: lavender;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Key Additions */
+    flex: 1 0 auto;
+    margin: 0px 12px 0px 0px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: black;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right .right-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    margin: 12px 12px 0px 0px;
+}
