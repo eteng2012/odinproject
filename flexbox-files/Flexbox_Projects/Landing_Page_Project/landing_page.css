@@ -89,8 +89,8 @@ a {
 
 .body-1 .img img {
     /* WIDTH/HEIGHT STOPS IMAGE FROM OVERFLOWING DIV BOX! */
-    width: 800px;
     height: auto;
+    width: 800px;
 }
 
 .body-2 {
