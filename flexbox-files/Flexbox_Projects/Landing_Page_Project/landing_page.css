@@ -108,11 +108,8 @@ a {
     font-weight: bold;
 }
 
-.body-2 .clear-text {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
+.body-2 .clear-text::before {
+    content: '\00a0'; /* Unicode for a non-breaking space */
 }
 
 .smaller {
@@ -123,7 +120,7 @@ a {
     padding: 0px;
 }
 
-.body-2 ul {
+.body-2 .ul {
     margin: 0px;
     padding: 0px;
     gap: 0px;
@@ -179,17 +176,17 @@ a {
     padding: 1%;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 40%;
 }
 
 .body-4 .blue .text {
     color: white;
-    padding-left: 15%;
+    padding-left: 5%;
 }
 
 .body-4 .blue .signup {
     color: white;
-    margin-right: 15%;
+    margin-right: 5%;
     border-radius: 10px;
     background-color: blue;
     border-color: white;
