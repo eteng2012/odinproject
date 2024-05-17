@@ -21,7 +21,7 @@ function makebox(dimensions) {
             let blue = Math.random() * 255;
             let green = Math.random() * 255;
             box.style.opacity = 1;
-            box.addEventListener("mouseout", () => {box.style.backgroundColor = `rgb(${red}, ${blue}, ${green}, )`; box.style.opacity = `${Number(box.style.opacity)-0.1}`;})
+            box.addEventListener("mouseout", () => {box.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`; box.style.opacity = `${Number(box.style.opacity)-0.1}`;})
             box.style.width = "" + 100/dimensions + "%";
             row.appendChild(box);
         }
