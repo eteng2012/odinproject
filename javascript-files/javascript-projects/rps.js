@@ -18,11 +18,11 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
+/*
 function getHumanChoice() {
     let input = prompt("input choice");
     return input;
-}
+}*/
 
 let humanScore = 0;
 let computerScore = 0;
@@ -70,13 +70,34 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    for (let i=0; i<5; i++) {
-        playRound(getHumanChoice(),getComputerChoice());
+function playGame(humanChoice) {
+    playRound(humanChoice,getComputerChoice());
+    if (computerScore == 5) {
+        computerScore = 0;
+        humanScore = 0;
+        console.log("Computer Wins");
     }
-    console.log(humanScore);
-    console.log(computerScore);
+    if (humanScore == 5) {
+        computerScore = 0;
+        humanScore = 0;
+        console.log("Human Wins");
+    }
+    score.textContent = "" + humanScore + " " + computerScore;
 }
 
+const body = document.querySelector("body");
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
+rock.textContent = "rock";
+paper.textContent = "paper";
+scissors.textContent = "scissors";
+body.appendChild(rock);
+body.appendChild(paper);
+body.appendChild(scissors);
+rock.addEventListener("click", () => {playGame("rock")})
+paper.addEventListener("click", () => {playGame("paper")})
+scissors.addEventListener("click", () => {playGame("scissors")})
 
-playGame();
+let score = document.createElement("div");
+body.appendChild(score);

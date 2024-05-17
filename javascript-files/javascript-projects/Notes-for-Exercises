@@ -1,0 +1,12 @@
+// 2. += not working for strings?
+// 3. String length with .length, no .size
+// 3. Their solution used the array/string relationship: .split("").reverse().join(""), reverse w/ array reverse
+// 4. Arguments is an array object
+// 4. Declare array with const x = [];
+// 4. To have arbitrary number of arguments, use rest parameter: ...args, will collect any num of arguments
+// 4. Check if array has item with .includes(item)
+// 4. Array.filter(function) runs function on each item and returns array where only true
+// 5. += definitely works for numbers
+// 5. isNumber() is not a thing, to check integer use Number.isInteger(num)
+// 5. Smart way to swap integers is using array destructuring: if (min > max) [min, max] = [max, min];
+// 7. To round to one decimal, do Math.round(num*10)/10, Math.round rounds to single digit place
