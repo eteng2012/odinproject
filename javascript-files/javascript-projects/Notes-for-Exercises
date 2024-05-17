@@ -10,3 +10,12 @@
 // 5. isNumber() is not a thing, to check integer use Number.isInteger(num)
 // 5. Smart way to swap integers is using array destructuring: if (min > max) [min, max] = [max, min];
 // 7. To round to one decimal, do Math.round(num*10)/10, Math.round rounds to single digit place
+
+//Etch a Sketch
+//For flexbox, if want to use height/width 100%, need to add to html element type
+//Use let person = prompt("Please enter your name", "Harry Potter"); to ask user prompt
+//container.replaceChildren(); removes all elements in HTML node
+//Math.random() for random number
+//To change color of box, use template literal strings for rgb, `rgb(${red}, ${blue}, ${green})`
+//String to Number: Number(), Number to String: toString()
+//Change opacity without changing border opacity, use rgba(0, 0, 0, 0.5), alpha is opacity

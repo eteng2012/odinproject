@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    height: 10%;
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 90%;
+    width: 90%;
+}
+
+#container .row {
+    display: flex;
+    height: 6.25%;
+    width: auto;
+}
+
+#container .row .box {
+    height: auto;
+    width: 6.25%;
+    background-color: black;
+    /* border: 1px solid white; */
+}
