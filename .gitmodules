@@ -1,0 +1,3 @@
+[submodule "javascript-files/javascript-projects/javascript-exercises"] 
+  path = javascript-files/javascript-projects/javascript-exercises
+  url = git://https://github.com/eteng2012/odinproject
