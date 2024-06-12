@@ -1,0 +1,33 @@
+/* Frameworks and Preprocessors (precompilers) commonly found in workplace */
+/* Interviews for entry-level focus more on CSS fundamentals, even if job uses framework/preprocessor */
+/* USE VANILLA CSS IN PROJECTS! NEED TO DEVELOP STRONG FUNDAMENTALS! */
+
+
+
+/* Frameworks */
+
+/* Bootstrap packages commonly used CSS code, like icons and interactions */
+    /* Abstracts coding process */
+/* Tailwind changes how CSS applied through different syntax */
+    /* Supplies pre-named classes */
+/* These are all just bundles of CSS */
+    /* Many provide class called .btn that adds all needed styles to buttons, without needing to write CSS */
+/* Many frameworks exist (Bulma, Foundation) */
+/* Basically collection of preprepared CSS stylesheets */
+
+/* Issue include similar sites due to using same framework */
+/* Also, learning frameworks too early leads to lack of basic CSS knowledge */
+    /* Overriding framework styling and debugging hard without fundamentals */
+/* HARD TO REMOVE FRAMEWORK ONCE START PROJECT WITH IT! */
+
+
+
+/* Preprocessors (precompilers) */
+
+/* Languages that help CSS writing */
+    /* Reduce code repetition */
+    /* Saves time/code */
+    /* Includes loops and conditionals, joining multiple stylesheets */
+/* They are extensions of vanilla CSS */
+/* Most of their features implemented into vanilla CSS, so maybe not worth learning */
+/* Include SASS, LESS, Stylus */

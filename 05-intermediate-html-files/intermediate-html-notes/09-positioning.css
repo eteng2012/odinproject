@@ -1,0 +1,35 @@
+/* Static and Relative Positioning */
+
+/* Default position in mode is static */
+/* Relative is same but properties top, right, bottom, left displace element relative to position in document */
+    /* Example: position: relative; top: 10px */
+/* Basically displaces element from normal static position */
+
+
+/* Absolute Positioning */
+
+/* postition: absolute positions element at exact point on screen without disturbing other elements around it */
+/* Removes element from normal document flow, relative to an ancestor element */
+/* Don't affect other elements, not affected by others */
+/* Can use top, right, bottom, left to position */
+    /* However, will be relative to first parent element that is not static or just the root */
+    /* top: 0 will go to top of screen unless parent is not static */
+
+/* Use cases include modals, image with caption, icon on elements */
+/* However, prioritize using flexbox/grid */
+
+
+
+
+/* Fixed Positioning */
+
+/* Also removed from flow, position relative to viewport, same top, right, ... */
+/* Stays in place as user scrolls */
+/* Good for navigation bar, chat button */
+
+
+
+/* Sticky Positioning */
+
+/* Normal until scroll past element, then start behaving like fixed elements */
+/* Good for section headings */

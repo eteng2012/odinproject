@@ -1,0 +1,69 @@
+/* Absolute vs. Relative Units */
+
+/* Absolute same in any context */
+/* px = size of pixel */
+/* in/cm for printing size */
+
+/* Relative */
+/* em and rem are both font size, but can define other sizes */
+/* em - parent font size, rem = root font size */
+/* lem is font size of element, so can set width = 4em = 4 * font size */
+/* 1rem is font size of root element */
+
+/* Using rem is good as browsers allow change font size to increase readability */
+/* However, browsers also allow zooming, which does not need this */
+/* Article says to use rem for font-size, px for everything else */
+
+/* When putting rem and px together, could break layouts */
+/* Ex: Header break if text overflows/wrapping */
+
+/* Viewport Units */
+/* Units vh and vw are size of viewport */
+/* 1vh = 1% of viewport height, ... */
+/* vmin = % of smaller dimension (width or height), vmax = ... */
+/* Example: 10vmin, 10vmax */
+
+/* When it comes to scaling fonts, sometimes don't want dramatic increase/decrease */
+/* Can use calc() to control*/
+/* Example: font-size: calc(16px + 1vw) makes font grow 1px for every 100px width*/
+/* Example: line-height: calc(1rem + 1vw) */
+/* To restrain top-end size, use media-query:
+@media (min-width: 50em) {
+  h1 {
+    font-size: 50px;
+  }
+} */
+
+/* Viewport can also help with variations on full-height layouts */
+/* Destop-style full-height interface, page broken into individually scrolling sections */
+/* vh units make header/footer/sidebar easier */
+/* height: 100vh contrains element to height of viewport */
+/* May eed overflow values in internal elements to stop content cutoff */
+
+/* Sticky footers can be made by settting body min-height: 100vh */
+
+/* Use vh to make sections */
+
+
+
+/* Fluid Aspect Ratios */
+/* Useful to contraint height-to-width ratio */
+/* Can use % padding on container, absolute position on inner elements */
+/* Also can use viewport unit and calc() */
+/* .full-width {
+  width: 100vw;
+  height: calc(100vw * (9/16));
+} */
+/* Can use vmin = smaller one of vh and vw, to have container change with both height/width */
+
+/* Can break content outside of restricted container (mix constrained text with full-width background) */
+/* .full-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+} */
+/* This sets margin to middle of container (50%), then moves 1/2 of viewport width/length (-50vw) */
+/* Puts margin to end of viewport regardless of container */
+
+/* Can make a scroll indicator with just CSS */
+/* Use viewport units on a background image */
+/* Seems complicated */

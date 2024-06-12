@@ -1,0 +1,331 @@
+<!-- One of them most important parts of website -->
+    <!-- User's gateway into backend, how we get data from users -->
+
+
+
+<!-- Form Element -->
+
+<!-- It is container element (like div), wraps user input -->
+<!-- Accepts two attributes -->
+    <!-- 1. action: takes url value that tells form where to send data -->
+        <!-- Hook to backend systems -->
+    <!-- 2. method: tells browser which http request method to use to submit form -->
+        <!-- GET and POST request methods most used -->
+            <!-- GET = retrieve something from a server (google GETs search results) -->
+            <!-- POST = change something on server (make account, payment) -->
+<!-- Example: -->
+    <form action="example.com/path" method="post">
+
+    </form>
+
+
+
+<!-- Form Controls -->
+    <!-- Form control elements are elements users interact with -->
+    <!-- Include text box, dropdown, button, checkbox, etc. -->
+    <!-- Below are some common ones -->
+
+
+
+<!-- Input Element -->
+    <!-- Most versatile -->
+    <!-- Accepts type attribute, type of data to expect -->
+    <!-- Example: -->
+    <form action="example.com/path" method="post">
+        <input type="text">
+    </form>
+    <!-- type="text" inputs accept any input (collect user names) -->
+
+<!-- Labels important to tell what kind of data to provide -->
+    <!-- Need to make <label> element -->
+        <!-- Accepts for attribute, associated with input -->
+        <!-- To connect the for attribute with input, input must have id attribute w/ same value -->
+    <!-- Example: -->
+    <form action="example.com/path" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name">
+    </form>
+
+<!-- Placeholder attribute used to guide user on what to enter -->
+    <!-- Acts as placeholder text -->
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" placeholder="Bob...">
+
+<!-- Name attribute is reference to data inputted into form control after submission -->
+    <!-- Basically variable name -->
+    <!-- ALL INPUT SHOULD HAVE THIS! Otherwise ignored when form submitted -->
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name">
+
+<!-- Form Control outside of forms -->
+    <!-- Can use them outside of <form> element, even without backend server -->
+    <!-- Example is displaying input on the page using JS -->
+        <!-- const name = document.querySelector("#username") -->
+        <!-- greetMeButton.addEventListener('click', (event) => {greetingOutput.innerText = `Hello ${name.value}`;}) -->
+    
+<!-- Type attribute -->
+    <!-- Email input are special text input for email address -->
+        <!-- Display different keyboard with @ symbol -->
+        <!-- Make with type="email" -->
+        <label for="user_email">Email Address:</label>
+        <input type="email" id="user_email" name="email" placeholder="you@example.com">
+    <!-- Password inpput also special, characters masked with * or . -->
+        <label for="user_password">Password:</label>
+        <input type="password" id="user_password" name="password">
+    <!-- Number input only numbers -->
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount">
+    <!-- Dates input -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+<!-- Text Area -->
+        <!-- Provides input box that accept text spanning multiple lines -->
+            <!-- Resize by clicking and dragging bottom right corner -->
+            <textarea></textarea>
+            <!-- Unlike input, has closing tag -->
+            <!-- Set initial height/width with rows/cols attribute -->
+            <textarea rows="20" cols="60"></textarea>
+
+
+
+<!-- Selection Elements -->
+
+<!-- Useful when want users to select value from predefined list -->
+<!-- Similar syntax to unordered list -->
+
+<!-- Select Dropdown -->
+    <!-- <select> element, each item <option> element -->
+    <select name="Car">
+        <option value="mercedes">Mercedes</option> 
+    </select>
+    <!-- Option needs value="...", otherwise text content used -->
+    <!-- Giving option "selected" attribute causes it to be default -->
+        <option value="volvo" selected>Volvo</option>
+    <!-- Split options list into groups with <optgroup> element -->
+        <!-- Takes label attribute -->
+        <optgroup label="Clothing">
+            <option value="t_shirt">T-Shirts</option>
+            <option value="coats">Coats</option>
+        </optgroup>
+    
+<!-- Radio Buttons -->
+    <!-- Smaller list of 5 or less, better user experience to have options displayed, not hidden -->
+    <!-- Radio buttons is multiple options, user chooses one -->
+    <!-- Use <input type="radio" ... > to make -->
+    <div>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">Child</label>
+    </div>
+    
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult">
+        <label for="adult">Adult</label>
+    </div>
+    <!-- When select one, deselects all others -->
+    <!-- Connect radio buttons together with having same name attribute -->
+    <!-- Default select a radio button with "checked" attribute -->
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+        <label for="adult">Adult</label>
+    </div>
+
+<!-- Checkboxes -->
+    <!-- Same but multiple options -->
+    <!-- type="checkbox" -->
+    <div>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+    </div>
+    <!-- Single checkbox can be for T/F input -->
+    <!-- Use "checked" to default check -->
+
+
+
+<!-- Buttons -->
+
+<!-- Button triggers actions like submitting form -->
+<!-- Create with <button> -->
+    <button>Click Me</button>
+<!-- Accepts type attribute -->
+    <!-- Default is submit, Submit buttons are for submitting forms -->
+        <!-- Submit the form that the button is contained in -->
+        <button type="submit">Submit</button>
+    <!-- Reset button clears inputted data -->
+        <!-- type="reset" -->
+        <button type="reset">Reset</button>
+    <!-- Generic button can be used for anything -->
+        <!-- Used with JS for interactive UI -->
+        <!-- type="button" -->
+        <button type="button">Click to Toggle</button>
+
+
+
+<!-- Organizing Form Elements -->
+
+<!-- Large forms, don't want too many inputs -->
+<!-- HTML has elements to organize forms into sections -->
+    <!-- Fieldset element is container to group related form inputs into one unit -->
+        <!-- Make with <fieldset> -->
+        <fieldset>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+            
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name">
+        </fieldset>
+    <!-- Legend element gives field sets heading/caption so user knows what grouping is -->
+        <!-- Make with <legend> -->
+        <fieldset>
+            <legend>Contact Details</legend>
+        <!-- Always right after opening tag -->
+
+<!-- Common use for these elements is using fieldset to group radio buttons -->
+
+
+
+<!-- Styling Forms -->
+
+<!-- Challenges with styling HTML forms include -->
+    <!-- Default browser styles for for controls -->
+        <!-- To have consistent design for browsers, need to override default styles, self-style -->
+    <!-- Text-based form control easy to style, but radio and checkbox hard -->
+        <!-- Calendar/date picker impossible, need to use JS to make custom form control -->
+
+
+
+<!-- Form Structuring -->
+
+<!-- Do not nest form in form -->
+<!-- Can use form control outside <form> -->
+    <!-- To connect these controls to form element, use form attribute -->
+
+<!-- Clicking labels same as clicking input -->
+    <!-- Especially useful for radio/checkboxes -->
+
+<!-- For multiple labels, should nest widget/labels inside single <label> element -->
+    <!-- Helps with assistive tech -->
+    <!-- For example, screen readers need to read rule, then can read asterisk as requried -->
+        <!-- aria-label="required" makes sure screen reader reads them -->
+        <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+
+        <!-- So this: -->
+        <!--div>
+          <label for="username">Name:</label>
+          <input id="username" type="text" name="username" required>
+          <label for="username"><span aria-label="required">*</label>
+        </div-->
+        
+        <!-- would be better done like this: -->
+        <!--div>
+          <label for="username">
+            <span>Name:</span>
+            <input id="username" type="text" name="username" required>
+            <span aria-label="required">*</span>
+          </label>
+        </div-->
+        
+        <!-- But this is probably best: -->
+        <div>
+          <label for="username">Name: <span aria-label="required">*</span></label>
+          <input id="username" type="text" name="username" required />
+        </div>
+
+<!-- Inside form, can put other HTML structures -->
+<!-- Common HTML structures used with forms include <li> with <ul> or <ol> -->
+<!-- <p> and <div> also used -->
+<!-- Titles like <h1> and <h2> -->
+    <!-- Use <p> to group together an input, then add label, <span> for text in label, then input -->
+        <p>
+            <label for="expiration">
+              <span>Expiration date:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input
+              type="text"
+              id="expiration"
+              name="expiration"
+              required
+              placeholder="MM/YY"
+              pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+          </p>
+    <!-- For radio button group, maybe label by putting the <span> in the <legend> tag? -->
+
+
+
+<!-- For different form controls, read https://developer.mozilla.org/en-US/docs/Learn/Forms#the_different_form_controls -->
+
+
+
+<!-- Styling Forms -->
+
+<!-- Easy-to-Style -->
+    <!-- Includes form, fieldset/legend, single line input except search, textarea, buttons, label, output -->
+<!-- Harder-to-Style -->
+    <!-- Checkbox/radio buttons, search input -->
+<!-- Unable-to-Style in CSS alone -->
+    <!-- Color input, date-related control, range input, file input, dropdown widgets, progress, meter -->
+
+<!-- Font and text features easily used with any widget -->
+    <!-- Can use @font-face -->
+    <!-- Browser behavior inconsistent -->
+        <!-- Some widgets do not inherit font-family/font-size -->
+        <!-- To make form's apprearance consistent, use these CSS rules -->
+        button,
+            input,
+            select,
+            textarea {
+            font-family: inherit;
+            font-size: 100%;
+        }
+        <!-- Submit input does not inherit from parent, uses font-family: system-ui -->
+            <!-- Good reason to use <button> instead -->
+
+<!-- Box Sizing -->
+    <!-- Each widget has own rules for border, padding, margin -->
+    <!-- To standardize, use box-sizing and other property rules -->
+    input,
+        textarea,
+        select,
+        button {
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+<!-- Legend Placement -->
+    <!-- Default is over top left border of <fieldset> -->
+    <!-- Use positioning to change -->
+    fieldset {
+        position: relative;
+    }
+    
+    legend {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    <!-- Need to position fieldset so legend relative to it -->
+
+<!-- Example: -->
+<!-- https://mdn.github.io/learning-area/html/forms/postcard-example/ -->
+<!-- Uses a grid display for form element -->
+<!-- Submit button, can use :after/hover/focus to add styling -->
+
+
+
+<!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling -->
+
+
+
+<!-- UI Pseudo-Classes -->
+    <!-- There are pseudoclasses for UI -->
+    <!-- Original are :hover (hovered by mouse), :focus (focused = tabbed by keyboard), and :active (selects element when activated/clicked on/enter key) -->
+    <!-- UI ones are below -->
+        <!-- :required and :optional target attributes based on if required or optional (HTML attribute) -->
+        <!-- :valid/:invalid/:in-range/:out-of-range target valid/invalid form validation -->
+        <!-- :enabled/:disabled:read-only/:read-write target if can be disabled (disabled HTML attribute) or read-only (readonly HTML attribute) -->
+        <!-- :checked/:indeterminate/:default targets checkbox/radio that are checked/neither/default option when page loads -->
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes -->
+    

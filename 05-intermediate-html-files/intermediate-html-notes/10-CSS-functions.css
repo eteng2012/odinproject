@@ -1,0 +1,19 @@
+/* Functions */
+
+/* color: rgb() accepts 3 numbers for rgb */
+/* background: linear-gradient() accepts 2 colors for transition, can do more and also angle of direction  */
+    /* background: linear-gradient(90deg, blue, red); */
+
+/* calc() helps with mixing units, can nest: calc(calc() + ...) */
+    /* calc(100vh - calc(var(--header) + var(--footer))); means 100% of viewport minus header/footer */
+
+/* min() takes two values, is lesser of two */
+    /* If want to size image, can use width: min(150px, 100%) to say max 150px, otherwise size of container */
+
+/* max() takes two values, greater of two */
+
+/* clamp() takes three values, smallest, ideal, largest */
+    /* Follows ideal until small/large overrides */
+    /* Makes elements fluid/responsive */
+
+/* There are also a bunch of translate, rotate, scaling, skewing(twisting), matrix transform, perspective func. */

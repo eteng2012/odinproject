@@ -1,0 +1,77 @@
+<!-- Useful tool for working with HTML/CSS -->
+<!-- Plugin for VSCode -->
+
+<!-- Example is !, which gives the boilerplate for HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- Also has Wrap with Abbreviation -->
+<!-- Shift Command A -->
+<!-- Place inside carrot of tag you want to wrap-->
+<!-- Example: .wrapper>h1{Title}+.content -->
+<!-- Format: .wrapper for outer layer, >h1 is for adding h1 tag in wrapper -->
+<!-- {Title} is content, + is add in same element -->
+
+<!-- Wrapping Individual Lines -->
+<!-- Highlight lines want to wrap -->
+<!-- Example: nav>ul.nav>li.nav-item$*>a -->
+<!-- Format: Outer <nav> element, then makes <ul> element with .nav class -->
+<!-- Inside has li elements with .nav-item1 class for first element, num increments, adds <a> class -->
+<!-- $* is the number, $ is placeholder for number, * is the incrementer -->
+<!-- * is what makes new li element for each line -->
+
+<!-- Trim Filter -->
+<!-- Highlight lines want to wrap -->
+<!-- Example: ul.nav>li.nav-item$*>a|t -->
+<!-- Format: outer ul with nav class, inside elements li with .nav-item$ class, then <a> element -->
+<!-- The |t removes list markers (like 1. 2. or dots) -->
+
+<!-- Default wrapping, Emmet puts original content inside latest element, control output with $# -->
+<!-- Example: ul>li[title=$#]*>{$#}+img[alt=$#] -->
+<!-- Format: Outside ul wrapper, inside li elements, puts the original content in title, {}, and alt -->
+
+<!-- Remove Tags -->
+<!-- Use Command-K inside tag -->
+<!-- Removes tag -->
+
+
+
+<!-- Added to VS Code Shortcuts -->
+
+
+
+<!-- Cheat Sheet for Abbreviations: https://docs.emmet.io/cheat-sheet/ -->
+
+<!-- Extra Shortcuts -->
+<!-- Typing element name and press enter to make the tags appear -->
+<!-- Can put .name or #name after to assign class/id, can chain -->
+<!-- Example: button.confirm -->
+<!-- If just write .name or #name, auto chooses div -->
+<!-- For other attributes, need: button[type = "button"] -->
+<!-- Example: [type = "div"].class1 -->
+<!-- > symbol for child -->
+<!-- Example: div.purple>span.cyan, puts span in div -->
+<!-- Multiplicate elements with * -->
+<!-- Example: header>ul>li*3 -->
+<!-- Add text with {} -->
+<!-- Example: header>ul>li*3{abc} -->
+<!-- $ becomes number currently on -->
+<!-- Example: header>ul>li*3{$} makes 3 li with 1,2,3 -->
+<!-- Example: header>ul>li*3.class-${$} makes 3 li with class-1,2,3 -->
+<!-- Multiple $ zero pads the number -->
+<!-- $$ = 01, 02, ... -->
+<!-- Make siblings with + -->
+<!-- Example: header+main+footer makes 3 sibling elements -->
+<!-- Example: header>main+footer makes 2 sibling elements in header -->
+<!-- Example: header>main^footer puts main in header, header and footer siblings -->
+<!-- Can group elements with () -->
+<!-- Example: (header>main)+footer same as prev -->

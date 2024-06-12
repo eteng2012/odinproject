@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Table template</title>
+    <link href="planet.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Table template</h1>
+    <table>
+        <caption>
+            Data about planets in solar system
+        </caption>
+        <colgroup>
+            <col/><col/><col style="border: 4px solid"/>
+        </colgroup>
+        <tr>
+            <th colspan="2"></th>
+            <th scope="col"> name </th>
+            <th scope="col"> mass </th>
+            <th scope="col"> diameter </th>
+        </tr>
+        <tr>
+            <th scope="rowgroup" colspan="2" rowspan="3"> Terrestrial Planets</th>
+            <td> Mercury </td>
+            <td> 1 </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <td> Venus </td>
+            <td> 2 </td>
+            <td> 2 </td>
+        </tr>
+        <tr>
+            <td> Earth </td>
+            <td> 3 </td>
+            <td> 3 </td>
+        </tr>
+        <tr>
+            <th scope="rowgroup" rowspan="3"> Gas Planets</th>
+            <th scope="rowgroup"  rowspan="2"> Giant </th>
+            <td> Jupiter </td>
+            <td> 4 </td>
+            <td> 4 </td>
+        </tr>
+        <tr>
+            <td> Saturn </td>
+            <td> 5 </td>
+            <td> 5 </td>
+        </tr>
+        <tr>
+            <th scope="row"> Ice </th>
+            <td> Neptune </td>
+            <td> 6 </td>
+            <td> 6 </td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="2"> Dwarf Planets</th>
+            <td> Pluto </td>
+            <td> 7 </td>
+            <td> 7 </td>
+        </tr>
+    </table>
+
+  </body>
+</html>

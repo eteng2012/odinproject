@@ -1,0 +1,160 @@
+/* font-family changes font, if font not installed, fallback used */
+/* If no fallback, use default HTML font */
+/* Below is a popular stack of fonts used */
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* May need to import font from online source, font library or asset */
+
+/* There are performance issues with imported files */
+/* Best to use font stack */
+
+/* Imported Fonts */
+
+/* Online font library */
+/* Examples with <link> (HTML) */
+/*<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">*/
+/* Examples with @import (CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Self Hosted Fonts, import with @font-face */
+@font-face {
+font-family: my-cool-font;
+src: url(../fonts/the-font-file.woff);
+}
+
+h1 {
+font-family: my-cool-font, sans-serif;
+}
+
+
+
+/* Best Practices */
+
+/* @font-face does not trigger download, font downloaded only if used */
+
+/* Inline font declaractions allows browser to see font declaration sooner, no need to wait for stylesheet download */
+/* Use rel="preconnect" to establish early connection with third party */
+/* If the connection downloading font file, need to use crossorigin as font files sent over CORS connection */
+/* <head>
+  <link rel="preconnect" href="https://fonts.com">
+  <link rel="preconnect" href="https://fonts.com" crossorigin>
+</head> */
+
+/* Need both, one for CORS, one for non-CORS */
+
+/* Preload ignores some browser content strategies like unicode-range declarations */
+/* Use only to load a single font format or most important fonts */
+
+/* Font Delivery */
+/* Self-hosted fonts usually has better performance, but debated */
+/* Need to apply font file optimizations that third-party do automatically, like font subsetting and WOFF2 compression */
+
+/* WOFF2 is best modern font, better compression/browser support */
+
+/* Subset Fonts */
+/* unicode-range descriptor in @font-face declaration informs browser which characters a font can be used for */
+/* Example: unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D; */
+/* Does subsetting, gets only a portion of font */
+
+/* Fewer web fonts */
+/* font-family: system-ui; uses system font*/
+/* Variable fonts larger file size usually than non-variable */
+
+/* Font Rendering */
+/* Below for more info */
+/* Performance = optional, display text = block, mix = swap */
+/* CAN USE DIFFERENt IN DIFFERENT PARTS!  (swap for branding, optional for body text) */
+
+
+
+
+/* Text styles */
+
+/* font-style */
+/* Usually for italics */
+/* In HTML, can use <em> tag for italics, but it also signifies important text */
+/* In CSS: font-style: italic; */
+/* In HTML: <p>I <em>never</em> said he stole your money</p> */
+
+/* letter-spacing = space between letters */
+/* letter-spacing: .5em */
+
+/* line-height = space between lines */
+/* line-height: 1.5 */
+
+/* text-shadow: x | y | radius | color */
+/* text-shadow: 1px | 1px | 2px | black */
+
+/* text-overflow, can truncate overflowing text with elipsis */
+/* text-overflow: ellipsis; */
+
+/* In the @font-face, fomt-family = name, src: is paths to font files to be imported (state preferred first) */
+/* src has url() and format() */
+/* font-weight/style to specify details */
+
+
+
+/* Typography */
+
+/* Can scale text with @media queries */
+@media (min-width: 30em) {
+    html {
+      font-size: 125%;
+    }
+  }
+/* This only applies to styles when viewport greater than 30em */
+/* Can stack these to make text grow */
+
+/* Smoother way using calc() */
+html {
+font-size: calc(0.75rem + 1.5vw);
+}
+
+/* To control bounds of scaling, use clamp() */
+/* 3 values, low bound, calc() input, upper bound */
+html {
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+/* Limit how wide container can be with max-inline-length to limit line length */
+article {
+    max-inline-size: 66ch;
+}
+/* ch is number of characters, can also use rem */
+
+/* line-height to change line height */
+article {
+max-inline-size: 66ch;
+line-height: 1.65;
+}
+blockquote {
+max-inline-size: 45ch;
+line-height: 2;
+}
+/* MAKE SURE TO USE UNITLESS VALUES! ENSURES LINE HEIGHT RELATIVE TO font-size */
+
+/* Use scale to show hierarchy in content for clarity/flow */
+
+/* Web Fonts */
+/* Variable fonts use one font file for many different variants of font */
+/* EACH WEB FONT INCREASES LOAD TIME! */
+/* rel="preload" in <link> for web font tells browser to prioritize file */
+/* Use as="font" to tell browser file type */
+/* Always add crossorigin at end */
+
+/* <link href="/fonts/roboto-regular.woff2" type="font/woff2" 
+  rel="preload" as="font" crossorigin> */
+
+/* rel="preconnect" tells browser to initiate connection to third party domains that need to be accessed */
+/* Reduce latency */
+
+/* font-display us used to tell browser how to manage switchover from system font to web font */
+/* auto is default, user decides strategy, usually invisible text followed by swap */
+/* block = wait period, no text displayed until font loads, else fallback until swap */
+/* swap = very short block, fallback until swap */
+/* fallback = very short block, short swap */
+/* optional = very short block, no swap */

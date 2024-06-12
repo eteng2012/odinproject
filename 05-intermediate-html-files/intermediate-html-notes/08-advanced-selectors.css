@@ -1,0 +1,108 @@
+/* Child and Sibling Combinators */
+
+/* > = child combinator */
+/* + = adjacent sibling combinator */
+/* ~ = general sibling combinator */
+
+/* To get all divs in main, use main div {} */
+/* If only want direct children of main, use > */
+    /* main > div {} */
+/* If want only grand-children, use two > */
+    /* main > div > div {} */
+/* If want adjacent (immediately following) to target, same level of indentation, use + */
+    /* .group1 + div {} will select div after group1 class */
+    /* .group1 + div + div {} will select two after group1 class */
+/* If want to select all siblings, not just single one, use ~ */
+    /* .group1 ~ div */
+
+
+
+/* Pseudo-selectors */
+
+/* Pseudo-class selectors prefixed with single colon, targets elements existing in HTML */
+/* Pseudo-element selectors prefixed with two colons, target elements not normally in markup */
+
+
+
+/* CSS Specificity */
+/* 4 numbers, inline styling, ID, class, element */
+/* Each additional inlining adds 1,0,0,0, ID adds 0,1,0,0, class... */
+/* Largest 4 number block determines which styling used if conflict */
+
+
+
+/* Pseudo-classes */
+
+/* Dynamic and User Action Pseudo-Classes */
+    /* :focus applies to element currently selected by user w/ cursor or keyboard */
+    /* :hover applies to anything under mouse pointer, can highlight interactibility */
+    /* :active applies to currently clicked, give click feedback */
+    /* :link for unvisited links, :visited for visited links */
+        /* Example: a:visited { color: purple; } */
+
+/* Structural Pseudo-Classes */
+    /* :root is special classes that represents top level of document */
+        /* Same as html element but applies to non-html documents and is more specific (CSS specificity) */
+    /* :first-child / :last-child match elements first/last child of element */
+        /* p:first-child means first p element that is a child of a parent element? */
+        /* article:first-child means first child of article */
+        /* div p:first-child selects all first-child p element in divs */
+    /* :empty matches elements with no children */
+    /* :only-child matches elements with no siblings */
+    /* :nth-child(number, even, c*n) to select the nth element, even, or every nth element */
+
+
+
+/* Pseudo-elements */
+
+/* Affects parts of HTML that are not elements */
+/* 0,0,0,1 specificity */
+/* ::marker allows customize styling of <li> elements */
+    /* Example: ol li::marker { color: red; font-weight: bold; } */
+/* ::first-letter / ::first-line gives special styling to first letter or line of text */
+    /* Example: ol li::marker { color: red; font-weight: bold; } */
+/* ::selection changes highlighting when user selects text on page */
+    /* Example: p::selection { background: #fff; color: #ff0000; } */
+/* ::before / ::after allows extra elements on page with CSS without using HTML, usually to decorate text */
+    /* .emojify::before { content: '😎 🥸 🤓'; } */
+
+
+
+/* Attribute Selectors */
+
+/* Attribute = anything in opening tag of HTML element, like href or src */
+/* 0,0,1,0 like class/pseudo-class */
+/* [attribute] targets any element with "attribute" attribute */
+    /* [src] { } */
+/* selector[attribute] only selector elements with attribute */
+    /* img[src] {  } */
+/* [attribute = "value"] only specific value */
+    /* img[src="puppy.jpg"] {  } */
+/* Instead of =, can use ^= (match strings from start, prefix), $= (match strings from end, suffix), 
+    or *= (anywhere in string) */
+
+
+
+/* Exercise (CSS Diner) Notes */
+/* Chaining Selector: element#ID {} selects element with ID */
+/* Descendant Conbinator: element #ID {} selects thing with ID that is descendant of element */
+/* Grouping Selector: element1, element2 {} selects both elements */
+/* Universal Selector: * = everything */
+    /* plate * selects everything on plate */
+/* Adjacent Sibling Combinator: plate + apple gets all apples after plates */
+    /* To get both first and second sibling, need grouping selector */
+/* Descendant Combinator all descendants, if want only direct children use > */
+/* :first-child for first child of element */
+    /* plate orange:first-child means all first oranges inside plate */
+/* :nth-child */
+    /* plate:nth-child(3) gets third child if it is a plate */
+    /* :nth-child(3) gets all third childs */
+/* :nth-last-child same but count from end */
+/* :first-of-type gets first of element in any element */
+/* :nth-of-type(6n+3) */
+/* :only-of-type gets only element of type within other element */
+/* :last-of-type */
+/* :empty */
+/* :not(X) gets all elements not matching X (#id, :first-child, .big) */
+/* [attribute], like [class] */
+/* element[attribute] */

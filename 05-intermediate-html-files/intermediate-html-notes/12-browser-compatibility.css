@@ -1,0 +1,11 @@
+/* Browser Compatibility */
+/* https://caniuse.com/ is good to validate if new features supported by browsers */
+
+
+
+/* Mobile Browsers */
+/* iOS, Safari is the only supported browser */
+    /* Other browsers still using Safari rendering engine (WebKit) */
+    /* Need to support WebKit */
+/* Different screen sizes, can emulate different devices with browsers */
+    /* However, emulation not guaranteed to behave exact same */

@@ -1,0 +1,64 @@
+/* General setup */
+
+@font-face {
+    font-family: 'problack_italic';
+    src: url('font/sourcesanspro-blackit-webfont.woff2') format('woff2'),
+         url('font/sourcesanspro-blackit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'prolight';
+    src: url('font/sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('font/sourcesanspro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* Not needed for below */
+.montserrat-details {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+html {
+    font-size: 10px;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: 3.2rem;
+    font-family: "Montserrat", problack_italic, sans-serif;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+    font-family: "Montserrat", problack_italic, sans-serif;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    word-spacing: 0.6rem;
+    font-family: "Montserrat", prolight, sans-serif;
+  }
+  

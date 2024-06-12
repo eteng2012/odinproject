@@ -1,0 +1,66 @@
+/* Custom Properties (also called CSS variables) */
+
+/* Allow reference of value, helps if many elements have same property */
+/* Can redefine custom properties under different contexts */
+    /* Useful for creating light and dark themes */
+
+
+/* Syntax similar to normal rule declarations */
+    .error-modal {
+        --color-error-text: red;
+        --modal-border: 1px solid black;
+        --modal-font-size: calc(2rem + 5vw);
+    
+        color: var(--color-error-text);
+        border: var(--modal-border);
+        font-size: var(--modal-font-size);
+    }
+/* Declare with double hyphen, then hyphen separated name */
+/* Access with var() function, add double hyphen in front of name */
+    /* var() actually accepts two parameters, first is variable, second is fallback value (in case invalid) */
+    /* Can pass variables into fallback value that have their own fallback value */
+
+
+/* Scoping */
+/* Includes selector the custom property was declared in as well as descendants */
+    /* Similar to JS */
+/* If want "global" scope, declare in :root */
+/* Can also use :root for multiple themes */
+    /* :root.dark {} and :root.light {}, use JS and change root's class to switch between them */
+    /* const root = document.documentElement; const newTheme = root.className === 'dark' ? 'light' : 'dark';
+    root.className = newTheme; */
+
+/* If want to default to browser's or operating system's theme, use prefers-color-scheme media query */
+/* :root {
+  --border-btn: 1px solid rgb(36, 36, 36);
+  --color-base-bg: rgb(240, 240, 240);
+  --color-base-text: rgb(18, 18, 18);
+  --color-btn-bg: rgb(220, 220, 220);
+  --theme-name: "light";
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-btn: 1px solid rgb(220, 220, 220);
+    --color-base-bg: rgb(18, 18, 18);
+    --color-base-text: rgb(240, 240, 240);
+    --color-btn-bg: rgb(36, 36, 36);
+    --theme-name: "dark";
+  }
+} */
+/* Defaults to light, checks if prefers-color-scheme == dark using @media */
+/* prefers-color-scheme only has dark and light */
+    /* Defaults to light if no preference */
+
+/* Because attributes are inherited, can just change variable value and the attribute will change in descendants */
+
+/* Can use @property declaration to disable this inheritance */
+/* @property --box-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: cornflowerblue;
+} */
+
+
+
+/* To access variable in JS, same as standard properties */
+/* getComputedStyle(element).getPropertyValue("--my-var"); */

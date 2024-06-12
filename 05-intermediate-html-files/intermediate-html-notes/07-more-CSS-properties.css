@@ -1,0 +1,86 @@
+/* Background */
+
+/* Composed of 8 different properties */
+/* Include -attachment/clip/color/image/origin/position/repeat/size */
+/* Attachment = background image fixed in viewport or scrolls */
+/* Clip = background extends underneath border box, padding box, or content box */
+/* Color = color */
+/* Image = sets background images on element, context layers stacked on top of each other, first closest to user */
+    /* This includes using linear_gradient(color, color) or url("...") */
+/* Origin = sets background origin (from border start, inside border, or inside padding */
+    /* Ignored when attachment fixed */
+    /* Seems to just be clip but then dragged to bottom right? */
+/* Position = initial position, default left top (0%, 0%) */
+    /* Can have keyword (left) or % (first width, then depth) */
+    /* 2 values = x/y, 3 values = x/y + offset for preceding, 4 values = x, offset, y, offset */
+    /* % calculated by (container width - image width) * % = value */
+/* Repeat = repeat backgoround images */
+    /* Can do repeat for both x/y, repeat-x for just x, ... */
+    /* Can do repeat no-repeat, same as repeat-x */
+    /* space, round, ... */
+/* Size = size */
+    /* Can set % or px */
+    /* Also contain (largest possible without stretching), cover (smallest to fill container), auto (intrinsic size) */
+
+
+
+/* Borders */
+
+/* border: has 3 values: width, style, color */
+/* Example: border: medium dashed green; */
+
+/* border-radius is for rounded border */
+/* Can use px or % */
+/* Shorthand for 4 elements: top-left, top-right, bottom-right, bottom-left */
+
+
+
+/* box-shadow */
+
+/* Adds shadow effect around element, makes sense of depth on page, separation between elements */
+/* Best used sparingly and subtly */
+/* 2-4 length values, x, y, blur-radius, spread-radius (extra on top of existing) */
+/* Then optional "inset" keyword to reverse shadow direction */
+/* Then optional color, default white */
+
+
+
+/* Overflow */
+
+/* Sets desired behavior when content does not fit padding box */
+/* overflow: */
+    /* visible = continues downward */
+    /* hidden = cut off, "behind box", content exists, can be scrolled programmatically? */
+    /* clip = same but can't be programmatically scrolled */
+    /* scroll = add scrolling option inside container */
+    /* auto = same but scroll bar exists only if content overflows */
+/* 1-2 values, 1 = both x and y, 2 = separate horizontal and vertical */
+
+
+
+/* Opacity */
+
+/* Degree to which content hidden */
+/* 1 = visible, 0 = transparent */
+/* Affects its children */
+/* Can be between 0->1 */
+/* To transition opacity, use @starting-style */
+/* 
+.card {
+  transition:
+    opacity 5s,
+    display 5s;
+  background-color: orange;
+
+  transition-behavior: allow-discrete;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.card.hidden {
+  display: none;
+  opacity: 0;
+} 
+*/
+/* For accessibility, make sure color contrast visible */

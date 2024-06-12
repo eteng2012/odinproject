@@ -1,0 +1,212 @@
+<!-- Tables less used than buttons/lists/etc. -->
+<!-- Make with <table>, <tr> for each row, <th> for header, <td> for data cell -->
+
+<!-- Table is structured set of data made of rows and columns -->
+<!-- Point is that it is rigid -->
+<!-- SHOULD NOT BE USED TO LAY OUT WEBPAGE, CSS better at this -->
+
+<!--
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Table template</title>
+    <style>
+        html {
+        font-family: sans-serif;
+        }
+
+        table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200,200,200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        }
+
+        td, th {
+        border: 1px solid rgb(190,190,190);
+        padding: 10px 20px;
+        }
+
+        th {
+        background-color: rgb(235,235,235);
+        }
+
+        td {
+        text-align: center;
+        }
+
+        tr:nth-child(even) td {
+        background-color: rgb(250,250,250);
+        }
+
+        tr:nth-child(odd) td {
+        background-color: rgb(245,245,245);
+        }
+
+        caption {
+        padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Table template</h1>
+    <table>
+        <tr>
+            <td>Hi, I'm your first cell.</td>
+            <td>I'm your second cell.</td>
+            <td>I'm your third cell.</td>
+            <td>I'm your fourth cell.</td>
+          </tr>
+    
+          <tr>
+            <th colspan="2">Hi, I'm your first cell.</td>
+            <td>I'm your second cell.</td>
+            <td>I'm your third cell.</td>
+            <td>I'm your fourth cell.</td>
+          </tr>
+    </table>
+    
+
+  </body>
+</html>
+-->
+
+<!-- Needs <table> wrapper for table -->
+<!-- Smallest element is table cell, made by <td> element -->
+<!-- Sequential <td> elements adds to row -->
+<!-- <tr> element is wrapper for row -->
+<!-- Add headers with <th> -->
+    <!-- <th> headers allow for scope="row" attribute, make tables accessible -->
+
+<!-- Can make table elements span across multiple columns -->
+<!-- It is attribute of <th>, rowspan/colspan = 2 -->
+
+<!-- Can style with <col> / <colgroup> -->
+    <!-- If want to stype a column yellow, without external CSS/repeating inline -->
+    <!-- <colgroup> <col /> <col style="background-color: yellow" /> </colgroup> -->
+    <!-- This makes first col same, second background yellow -->
+    <!-- If want both yellow, can write one then use span="2" -->
+
+    <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>School timetable</title>
+    <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 2px solid rgb(200,200,200);
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    td, th {
+      border: 1px solid rgb(190,190,190);
+      padding: 10px 20px;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    caption {
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>School timetable</h1>
+
+    <table>
+        <colgroup>
+            <col span="2" />
+            <col style="background-color: green" />
+            <col style="width: 42px" />
+            <col style="background-color: green" />
+            <col style="background-color: brown" />
+            <col style="width: 42px" span="2"/>
+        </colgroup>
+        <caption>heeee</caption>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      <tr>
+        <th>1st period</th>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>2nd period</th>
+        <td>English</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>3rd period</th>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>4th period</th>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
+
+<!-- Add caption with <caption> directly under table tag-->
+    <!-- <caption> hello </caption> -->
+
+<!-- Can use <thead> <tbody> <tfoot> to structure table -->
+    <!-- Dont add anything by themselves, Useful hooks for CSS -->
+    <!-- These are wrappers for td/tr elements -->
+    <!-- tfoot will put row at bottom -->
+
+<!-- Can nest tables inside each other -->
+
+<!-- For visually impaired, can use scope element -->
+<!-- Added to th element to tell what the cells in header is header for -->
+    <!-- Can use scope="col" inside th element to show header is for col -->
+    <!-- Scope can also be colgroup and rowgroup, used for heading that sit over top of multiple rows -->
+
+<!-- Can also use id and headers to make associations -->
+    <!-- Headers is list of unordered, space-separated strings -->
+    <!-- Helps define position of each cell in table -->
+    <!-- Can also add unique id attribute to each element -->
+

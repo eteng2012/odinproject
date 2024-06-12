@@ -1,0 +1,45 @@
+/* CSS has default styles for elements */
+/* To establish consistent starting point for styling, people use CSS resets */
+/* Aim is to remove/alter defaults */
+
+/* Used if want to stop weird behavior or use different elements sematically */
+
+/* Normalize = fix inconsistency */
+/* Reset = remove everything (margin/padding, text styling) */
+/* Hybrid = combination */
+
+/* To import, use @import */
+
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5; 
+  /* Changes all line height */
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* To undo a reset for a specific place, use all: revert */
+
+.article :where(h1, h2, h3, h4, h5) {
+    all: revert;
+  }
+
+/* One example of good reset is using border-box, shrinks width in relation to padding */
