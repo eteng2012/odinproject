@@ -1,4 +1,0 @@
-Reference Error = var not defined in scope
-Stack Trace = call stack leading to Error
-Syntax Error = spelling
-Type Error = wrong type/method

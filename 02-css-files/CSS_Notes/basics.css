@@ -1,0 +1,149 @@
+/* Made of rules, which are made of a selector and a semicolon separated list od declarations, each declaration made of property-value pair */
+
+/* <div> is a basic HTML element for an empty container, sometimes need just a container for other elements */
+
+/* Selector is the HTML elements to which CSS rules apply, what being selected for rule */
+
+/* Universal Selector, selects elements of any time, below makes every element purple */
+* {
+    color: purple;
+}
+
+/* Type Selector, select all elements of given element type, syntax is just name of element, below makes all <div> white */
+div {
+    color: white;
+}
+
+/* Class Selector, selects all elements with given "class", which is attribute placed on HTML element */
+/* Example is <div class="alert-text">Please agree to our terms of service.</div> in HTML */
+/* Uses . followed by value for class */
+/* Can add multiple classes to single element: class="alert-text severe-alert" */
+/* Whitespace separates them, so don't use whitespace for class name */
+.alert-test {
+    color: red;
+}
+
+/* ID Selector, similar to class selector, but uses <div id="title">hello</div> */
+/* Difference is only 1 ID per element */
+/* Uses # followed by ID */
+/* USE THESE AS LITTLE AS POSSIBLE, */
+#title {
+    background-color: red;
+}
+
+/* Grouping Selector, used if two element groups share style declarations */
+/* Example is two class selectors same color, to reduce repetition, group them in comma separated list */
+.read, .unread {
+    color: white;
+}
+.read {
+    background-color: blue;
+}
+.unread {
+    background-color: black;
+}
+
+/* Chaining Selectors, chain selectors as list without separation */
+/* Given HTML element: 
+<div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection preview">This is where a preview for a post might go.</p>
+</div> */
+/* Two elements with subsection class, each has own unique class */
+/* Only want to apply rule to element with subsection and header class */
+.subsection.header {
+    color: red;
+}
+/* Can also chain class and ID */
+.subsection#preview {
+    color: red;
+}
+/* Can't chain type selectors as elements can't be two types */
+
+/* Descendant Combinator, combine selectors to show relationship */
+/* 4 types of combinators total, just show descendant right now */
+/* Single space between selectors, causes only elements that match the last selector to be selected if they also have an ancestor matching previous selector */
+/* Basically, .ancestor .child, only select element with child class if has ancestor with ancestor class */
+/* Child only selected if nested in ancestor, regardless of how deep nesting is */
+/* Given HTML element: <div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"><!-- D --></div>
+, only B and C would be selected, D and A would not*/
+.ancestor .contents {
+    color: red;
+}
+/* Can add any number of combinators */
+
+
+
+/* Properties */
+
+/* color = text color, background-color = background, can accept keyword (red, transparent) or HEX/RGB/HSL values */
+p {
+    color:#1100ff;
+    background-color: rgb(100, 0, 127);
+    /* color: hsl(15, 82%, 48%) */
+}
+
+/* Typography and Text-Align */
+/* font-family = font, can be single value for comma list */
+/* Font Family Name uses quotes: "Times New Roman", Generic Family Name doesn't: serif */
+/* If browser can't use font, uses next in list, so usually start with font you want then use generic after */
+/* font-size = font size, synax is number + px */
+/* font-weight = how bold the text is, can be keyword (bold) or number between 1 and 1000, bold = 700 */
+/* text-align aligns text horizontally within element, can use keyword (left, center, right) */
+p {
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* Image Height and Width */
+/* Default is actual file, can adjust, use number + px */
+/* To keep proportions, use auto keyword for height, adjust width */
+img {
+    height: auto;
+    width: 500px;
+}
+/* Because these work with height and width in HTML, best to use these even if don't plan on changing size, reserves the space */
+/* If not included, if image takes longer to load, will at first not take any space, then move everything around when loads */
+
+
+
+/* Add CSS to HTML */
+
+/* External CSS is most common way, create separate file and link it inside of HTML opening and closing <head> tags with self-closing <link> element */
+/* 
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head> 
+*/
+/* rel = relationship between files (USE SPECIFIC KEYWORD LIKE "stylesheet"), href = CSS file location */
+/* Good as only need to edit one CSS file, keeps things cleaner */
+
+/* Internal CSS/Embedded CSS, place all rules inside open and closing <style> tags, placed inside <head> tags */
+/* 
+<head>
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+</head> 
+<body>...
+*/
+/* Useful for unique styles in a single page of website */
+
+/* Inline CSS, directly into HTML elements, isn't recommended */
+/* Does it all within the first <div> tag, fine for unique style of single element
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
+ */

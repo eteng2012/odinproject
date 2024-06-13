@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External script -->
+</head>
+<body>
+    <script>
+        let string = "hello"
+        let greeting = `${string}, eric`
+        console.log(greeting)
+        greeting = `${string}${greeting}`
+        console.log(greeting)
+        let output = `${100/12}`
+        console.log(output)
+        const newline = `One day you finally knew
+what you had to do, and began,`
+        console.log(newline)
+        console.log(greeting.at(-1))
+        greeting = greeting.substr(2)
+        console.log(greeting)
+        let str = "1";
+        let x = Number(str)
+        console.log(x)
+        let num = 2
+        let ans = num.toString()
+        console.log(ans)
+        let st2 = "2"
+        let y = +str+st2
+        console.log(y)
+    </script>
+    
+</body>
+</html>
+
+<!-- Javascript Data Types -->
+
+<!-- Number is both integers and floats -->
+<!-- Has both numbers and special values like Infinity, -Infinity, and NaN -->
+<!-- NaN is error -->
+
+<!-- BigInt is for numbers bigger than 2^53 - 1 -->
+<!-- For the number data type, there is a precision error for numbers greater than that -->
+<!-- BigInt can be arbitrary length, need to add n to end of number, const bigInt = 123n -->
+
+<!-- String are below -->
+
+<!-- Boolean is true/false -->
+
+<!-- Null is nothing -->
+
+<!-- Undefined is no value assigned, default value -->
+
+<!-- Object type can store collections of data, unlike others not primitive -->
+
+<!-- Symbols type creates unique identifiers for objects -->
+
+<!-- typeof x returns string with type name -->
+
+
+
+<!-- Strings -->
+<!-- let string = "hello" -->
+<!-- "", '', or `` works -->
+<!-- When declare with backticks, ``, become a special string called template literal -->
+<!-- These can have javascript embedded in them, can declare over multiple lines -->
+<!-- Use embedding to make strings part of other strings, let greeting = `${string}, eric` -->
+<!-- Concatenation is when joining strings, greeting = `${string}${greeting}` -->
+<!-- Can also embed expressions like output = `${song}. ${(score / highestScore) * 100}%.`; -->
+
+<!-- For all strings, can use + to concatenate -->
+
+<!-- For template literals, can do multiline strings declaration -->
+<!-- const newline = `One day you finally knew
+what you had to do, and began,`; -->
+<!-- When print this, will print multiline -->
+
+<!-- To put quotes in strings, can use other quote type to declare: x = 'hey, "charles" ' -->
+<!-- Or can use backslash, \' -->
+
+<!-- When concatenate number and string, turns number into string -->
+<!-- To make string into number, use Number() -->
+<!-- String() does reverse, also can do .toString() -->
+<!-- Number is the type in Javascript, no int/double? -->
+
+<!-- String Methods -->
+
+<!-- Length -->
+<!-- let length = string.length -->
+<!-- at(position), charAt(position), charCodeAt(position), string[] -->
+<!-- at = charAt = string[], returns element at index -->
+<!-- at(-2) gives char at second from last, at(-1) gives last, same as length-1 -->
+<!-- However, for at if finds no character, returns undefined, others return empty string -->
+<!-- These are read only, str[0] = 'a' does nothing, at/charAt crashes -->
+<!-- charCodeAt returns UTF-16 code of char, integer between 0 and 65535 -->
+
+<!-- String Parts -->
+<!-- slice() takes part of string, string.slice(7, 13), start/end position -->
+<!-- slice(7) takes starting from 7 to end -->
+<!-- slice(-7) takes from 7 positions from end to end -->
+<!-- slice(-12, -6) als works -->
+<!-- substring() = slice() but negative values treated as 0 -->
+<!-- substr() = same but second parameter is length, not end, no second = rest of string -->
+
+<!-- Case -->
+<!-- toUpperCase(), toLowerCase() -->
+
+<!-- Concatenate, joins two or more strings -->
+<!-- string1.concat(" ", string2) joins string1, " ", and string2 -->
+<!-- Similar to + -->
+
+<!-- Note that all string methods return new string, strings are immutable, only be replaced not changed -->
+
+<!-- Remove Whitespace -->
+<!-- trim() removes whitespace from both sides of string -->
+<!-- trimStart() and trimEnd() only do one side -->
+
+<!-- Padding -->
+<!-- string1.padStart(4, string2) pads the start of string1 with string2 four times -->
+<!-- Also has padEnd() -->
+
+<!-- Repeat -->
+<!-- repeat() returns string with copies of string, doesn't change original -->
+<!-- string.repeat(4) -->
+
+<!-- Replace -->
+<!-- replace(string1, string2) replaces the first match of string1 in the str with string2 -->
+<!-- Can use flag /.../i to replace with case insensitive, replace(/string1/i, string2) -->
+<!-- Can use flag /.../g to replace all instances, replace(/string1/g, string2) -->
+<!-- Flags written without quotes -->
+<!-- replaceAll -->
+<!-- Allows specify regular expression instead of string, needs /.../g if so -->
+<!-- Otherwise, just replaces all instances -->
+
+<!-- String to array -->
+<!-- split(",") splits the array on commas, then converts the string into an array of strings -->
+<!-- If no separator, entire string on index 0, if "", then array is single characters -->
+
+
+
+<!-- Conditionals -->
+<!-- If statements same as C++ -->
+<!-- Switch statement: switch(x) { case 1: break; case 2: break; default: break;} -->
+<!-- Checks if x == 1, x == 2 -->
+<!-- Allows for arbitrary expressions, switch (+"1") case 0 + 1 runs -->
+<!-- When put nothing then +, defaults to number, +"1", can't do more +strings though for number? -->
+<!-- Can group case by not putting break, case 3:case 4 runs break; -->

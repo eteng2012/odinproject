@@ -1,0 +1,41 @@
+// 2. += not working for strings? (WRONG, IT WORKS!)
+// 3. String length with .length, no .size
+// 3. Their solution used the array/string relationship: .split("").reverse().join(""), reverse w/ array reverse
+// 4. Arguments is an array object
+// 4. Declare array with const x = [];
+// 4. To have arbitrary number of arguments, use rest parameter: ...args, will collect any num of arguments
+// 4. Check if array has item with .includes(item)
+// 4. Array.filter(function) runs function on each item and returns array where only true
+// 5. += definitely works for numbers
+// 5. isNumber() is not a thing, to check integer use Number.isInteger(num)
+// 5. Smart way to swap integers is using array destructuring: if (min > max) [min, max] = [max, min];
+// 7. To round to one decimal, do Math.round(num*10)/10, Math.round rounds to single digit place
+
+//Etch a Sketch
+//For flexbox, if want to use height/width 100%, need to add to html element type
+//Use let person = prompt("Please enter your name", "Harry Potter"); to ask user prompt
+//container.replaceChildren(); removes all elements in HTML node
+//Math.random() for random number
+//To change color of box, use template literal strings for rgb, `rgb(${red}, ${blue}, ${green})`
+//String to Number: Number(), Number to String: toString()
+//Change opacity without changing border opacity, use rgba(0, 0, 0, 0.5), alpha is opacity
+
+// 8. Math.pow(a, b); for power
+// 9. string.includes() to see if string has substring
+// 9. String to array, use split()/join()
+// 9. Reverse array with .reverse(), can use this and string to array to reverse string
+// 11. Common practice to use const for arrays, const is const reference to array
+// 11. for in loop gives indices, not objects
+// 11. If you get array and return array, try to use functions like .map()
+// 12. If get array and return some info from it, maybe use  .reduce()
+// 12. Their solution good
+
+
+
+//Calculator
+//Apparently eval() not good due to security reasons?
+//Similar thing with returning: new Function();
+//buttons.insertBefore(button, buttons.firstChild); used to insert child element at front of element
+//+= definitely works for strings
+//Elements can have multiple event listeners with addEventListener, use .removeEventListener, exact same input
+//toString is num.toString()

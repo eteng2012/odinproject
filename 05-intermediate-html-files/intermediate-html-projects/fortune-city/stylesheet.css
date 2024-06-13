@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FortuneCity';
+    src: url('FortuneCity.woff2') format('woff2'),
+        url('FortuneCity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

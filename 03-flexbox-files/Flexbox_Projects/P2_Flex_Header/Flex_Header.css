@@ -1,0 +1,39 @@
+.green-square {
+    background: lightgreen;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 32px;
+}
+
+/* NO NEED TO SET HEIGHT, HEIGHT SHOULD BE BASED ON FONT SIZE! */
+
+.green-square .Logo {
+    font-size: 50px;
+    color: red;
+    background: white;
+    font-weight: bold;
+    padding: 4px 32px;
+}
+
+.green-square .left li, .green-square .right li {/* Need to have li here to affect each ul element */
+    font-size: 50px;
+    color: blue;
+    background: white;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 10px;
+    padding: 8px 8px;
+}
+
+
+ul {
+    list-style-type: none;/* Removes dots from ul */
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    display: flex
+}
+
+/* Key was changing ul margins and making the ul have display: flex to stop newlines. */

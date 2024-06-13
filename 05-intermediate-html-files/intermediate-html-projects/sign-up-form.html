@@ -4,8 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sign-up-form.css" >
 </head>
 <body>
-    
+    <div class="left-column">
+        <div class="title">
+            YoRHa <br> Recruitment Form
+        </div>
+        <div class="credits">Photo by <a href="https://www.deviantart.com/fakhrinh/art/Nier-Automata-YoRHa-Desktop-Wallpaper-718866142">fakhrinh</a>
+         on <a href="https://www.deviantart.com">DeviantArt</a></div>
+    </div>
+    <div class="right-column">
+        <div class="ad">
+            <div>
+                lfheawiofhao;wehifo;aw faewio;fj; aow faewjio; afe;i
+                <br><br>
+                fheuwif
+            </div>
+        </div>
+        <div class="form">
+            <div class="intro">Lets do this!</div>
+            <form id="info" action="output.txt" method="post">
+                <fieldset>
+                    <div>
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div>
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" minlength="3" required>
+                    </div>
+                    <div>
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" minlength="3" required>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="login">
+            <button type="submit" form="info">Create Account</button>
+            <div class="account">Already have an account? 
+                <a href="file:///Users/ericteng/Desktop/eecs_files/odinproject/05-intermediate-html-files/intermediate-html-projects/sign-up-form.html">Log in</a></div>
+        </div>
+    </div>
 </body>
 </html>
