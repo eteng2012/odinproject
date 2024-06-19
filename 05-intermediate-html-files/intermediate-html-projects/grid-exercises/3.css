@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* NEEDED FOR LATEST ARTICLES BOX TO BE CENTERED! */
+  }
+  
+  .container {
+    text-align: center;
+    display: grid;
+    grid-template: 2fr repeat(16, 1fr) 1fr / repeat(5, 1fr);
+    width: 100vw;
+    height: 100vh;
+    gap: 5px;
+  }
+  
+  .container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+  }
+
+    ul {
+        list-style-type: none; /* Remove bullets */
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        display: inline; /* Display list items in a line */
+        margin-right: 10px; /* Optional: Add space between items */
+    }
+  
+  .header {
+    background-color: #393f4d;
+    grid-column: 1 / span 5;
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+  }
+
+  .header .logo {
+    text-align: left;
+    align-self: center;
+  }
+
+  .header .menu {
+    text-align: center;
+    align-self: center;
+  }
+
+  .header .menu ul {
+    display: grid;
+    gap: 5vh;
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  
+  .menu ul,
+  .menu li {
+    font-size: 16px;
+  }
+  
+  .sidebar {
+    background-color: #C50208;
+    grid-row: 2 / span 16;
+    display: grid;
+    gap: 5vh;
+  }
+  
+  .sidebar .photo {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 10px;
+
+    display: grid;
+    align-items: center;
+  }
+  
+  
+  .sidebar .side-content {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    display: grid;
+    align-items: center;
+  }
+  
+  .nav {
+    display: grid;
+    /* REMEMBER THIS! */
+    background-color: #C50208;
+    grid-column: 2 / -1;
+    grid-row: 2 / span 1;
+    align-items: center;
+  }
+
+  .nav ul {
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1fr; 
+  }
+  
+  .nav ul li {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .article {
+    background-color: #bccbde;
+    grid-column: 2 / -1;
+    grid-row: 3 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+  }
+  
+  .article p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+  }
+  
+  .article .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+  }
+  
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  .card .title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #393f4d;
+    grid-column: 1 / -1;
+    display: grid;
+    align-items: center;
+  }
+  
+  .footer p {
+    font-size: 13px;
+    font-weight: normal;
+    display: grid;
+    align-items: center;
+  }
+
+
+
+
+  /* ALIGN ITEMS VS ALIGN SELF */
+    /* ONE IS THE CHILDREN, THE OTHER IS SELF!!!! CAN USE ALIGN ITEMS IN GRID */

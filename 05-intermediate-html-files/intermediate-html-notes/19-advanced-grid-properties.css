@@ -1,0 +1,98 @@
+/* Responsive, dynamic, reusable grid */
+
+
+
+/* Some Attributes */
+
+/* grid-item used to select grid items */
+    .grid-item {
+        background-color: #444;
+        text-align: center;
+        color: #ddd;
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+
+/* resize: both is an attribute to allow resizing of container by user by dragging bottom right corner*/
+    /* Useful with properties that resize grid tracks based on size of grid */
+
+/* overflow: auto enables scrolling if resize container to be smaller than grid */
+
+
+
+/* Repeat */
+
+/* Tedious to trype out grid-template, use repeat() */
+    .grid-container {
+        grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(5, 150px);
+    }
+
+
+
+/* Fractional Units */
+
+/* Using fr unit is way of distributing REMAINING SPACE in grid */
+    /* Example: 4 col grid, width 400px, 1 fr = 100px if each given 1 fr */
+    /* Works with resizing */
+
+/* However, there is a distinct smallest size */
+    /* Defined by smallest size the inner contents can be (like <p> or <img> */
+    /* min-content is the attribute to define this */
+
+
+
+/* Min/Max track sizes */
+    /* Best to explicitly decide min/max without relying on min-content */
+    /* min() and max() return smallest/largest of arguments */
+
+
+
+/* minmax() is function used with grid, only used with grid-template and grid-auto */
+    /* Takes in min and max size of grid track */
+    .grid-container {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, minmax(150px, 200px));
+    }
+    /* Column with stop shrinking at 150px, stop growing at 200px */
+
+/* clamp(min, ideal, max) can also be used */
+
+
+
+/* auto-fit and auto-fill */
+
+/* Used with repeat */
+    .example {
+        display: grid;
+        width: 1000px;
+        grid-template-columns: repeat(auto-fit, 200px);
+    }
+    /* Number of columns flexbile to size of grid */
+    /* Max number without overflowing */
+    /* If use with minmax(), can tell to have as many columns as possible */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    /* Logic for auto-fit is this:
+        - The maximum number of columns can fit = width/150px
+        - Have that many columns
+        - Each column can then expand to 1fr
+        - No extra space
+     */
+
+/* auto-fill = auto-fit except keeps element at min size instead of max size */
+
+
+
+/* justify-self and align-self changes the alignment of grid elements */
+    /* .item {
+        justify-self: start | end | center | stretch;
+    } */
+
+/* place-self sets both with one input */
+
+
+
+/* fit-content uses avaliable space, not less than min-content, not more than max-content? */

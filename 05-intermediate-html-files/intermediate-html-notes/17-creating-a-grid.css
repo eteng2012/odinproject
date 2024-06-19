@@ -1,0 +1,34 @@
+/* Set up grid with display: grid or display: inline-grid */
+/* All of the direct child elements will be grid items */
+    /* Don't need to assign child element property */
+
+/* Starting out, need to have borders to actually see grid outline, otherwise looks normal */
+
+/* Using grid-template-columns: 50px and grid-template-rows: 50px 50px defines width/height of grid elements */
+    /* The number of inputs into the grid-template attributes defines the number of elements for rows/cols */
+    /* Can use grid-template: 50px / 50px to define both (row/col) */
+    /* The input (50px) is the width/height of grid */
+    .container {
+        display: grid;
+        grid-template: 50px 50px / 50px 50px 50px;
+    }
+
+
+
+/* If add more elements that alloted in grid-template, implicit grid defines them */
+    /* Can set implicit grid pattern with grid-auto-rows / grid-auto-columns */
+    /* The previous grid-template is explicit grid */
+    /* grid-auto-flow: defines which direction elements placed (row/col) */
+
+
+
+/* Gap */
+
+/* Gap knows as gutter/alley */
+/* column-gap: and row-gap: to set gap */
+/* gap: can set both */
+
+
+
+/* Grid container, grid item (children), grid line (dividing grid item), 
+grid cell (unit), grid track (row/col of units), grid area (total space surrounded by 4 grid lines) */

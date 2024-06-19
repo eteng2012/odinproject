@@ -1,0 +1,12 @@
+/* Content vs. Layout Design */
+
+/* Content First Design = clarity about content, layout follows */
+    /* Use Flexbox */
+    /* Gives control on behavior of items */
+    /* Final layout is a consequence, can change a lot */
+
+/* Layout First Design */
+    /* Pieces arranged, then fill content */
+
+/* One-Dimensional content, flexbox easier control */
+/* 2-D, grid easier */

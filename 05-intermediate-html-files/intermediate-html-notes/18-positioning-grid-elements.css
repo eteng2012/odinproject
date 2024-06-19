@@ -1,0 +1,55 @@
+/* Lines */
+
+/* Grid lines made implicitly, can not be made explicitly */
+/* Created after grid tracks defined with grid-template */
+/* Tracks have start and end line */
+    /* Numbered left to right/top to bottom, range from 1 to n+1 */
+
+
+
+/* Cells */
+/* Grid cell is one unit, each child occupies one cell */
+
+
+
+/* Positioning */
+
+/* To position an element into multiple row/col, use grid-column/row-start/end */
+/* This tells which row/col to start/end on */
+
+/* Can use grid-column/row to set both */
+    /* Example: grid-column: 4 / 6; */
+
+
+
+/* Grid-Area */
+
+/* Can use grid-area as shorthand for grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+/* Can also use grid-area to position item with visual layout using words */
+    /* Use grid-template-areas: */
+    /* 
+    grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet bathroom kitchen kitchen"    
+    */
+    /* grid-area: living-room; */
+
+/* Use . to indicate empty cells */
+
+
+
+/* Counting Backwards */
+/* Use negative sign to count backwards from end */
+
+
+
+/* Span */
+/* Use span before number in attribute input to specify length instead of endpoint */
+    .box1 {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }

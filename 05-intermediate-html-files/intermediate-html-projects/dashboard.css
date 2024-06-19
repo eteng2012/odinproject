@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    /* BORDER-BOX WITH ICONS CAUSE SIZING ISSUES!!! */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    padding: 0%;
+    margin: 0%;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+ul li {
+    margin: 2vh;
+}
+
+svg {
+    box-sizing: content-box;
+}
+
+input, form {
+    padding: 0%;
+    margin: 0%;
+}
+
+.sidebar {
+    height: 100vh;
+    display: grid;
+    grid-template: 1.5fr 6fr 3fr 6fr / 1fr;
+    background-color: rgb(59, 171, 246);
+    color:white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.sidebar .part1 {
+    font-size: 3rem;
+    margin: 2vh;
+}
+
+.main {
+    display: grid;
+    grid-template: 2fr 3fr 20fr/ 1fr;
+    max-height: 100vh;
+    background-color: rgb(216, 231, 235);
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    margin: 0% 0% 0% 5%;
+    /* Puts button grid element at right place */
+    /* DO NOT ADD PADDING! CAUSES HEIGHT TO GROW PAST GRID */
+}
+
+/* Issue with grid is if width of button grows, width of input grows, so then height grows */
+/* Fix by controlling button width */
+/* However, hard to align grid element with flex % */
+
+/* Icons with Flex */
+.search form button {
+    height: 50%;
+    width: auto;
+    /* NEED AUTO TO STOP WIDTH DRAGGING HEIGHT BIGGER */
+    padding: 0%;
+    border: none;
+    background-color: white;
+}
+
+.search form button svg {
+    height: 100%;
+    /* DO NOT PUT WIDTH:100% AS THAT IS ENTIRE FLEX! */
+}
+
+.search form input {
+    width: 100%;
+    height: 50%;
+    border-radius: 50px;
+    /* Using % looks bad */
+    padding: 0% 1.5%;
+    /* Make room for input text */
+    font-size: 2rem;
+}
+
+
+/* Icons with Flex */
+.search .container {
+    display: flex;
+    align-items: center;
+}
+
+.search .container svg {
+    height: 100%;
+    width: auto;
+    box-sizing: content-box;
+    /* Stops sizing issues */
+    margin: 0% 5% 0% 5%;
+}
+
+.search .container div {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    margin: 0% 5% 0% 5%;
+    white-space: nowrap;
+    font-size: 2rem;
+    padding: 0%;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    /* Need to do flex here in order for image to stay small, otherwise container will not shrink to size */
+    height:100%;
+    box-shadow: 5px 5px 10px rgb(145, 145, 145);
+    background-color: white;
+}
+
+.intro .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0% 0% 0% 5%;
+    /* Need margin on container and not svg as otherwise shrinks png */
+}
+
+.intro .container svg {
+    height: 100%;
+}
+
+.intro .container div {
+    padding: 0% 0% 0% 5%;
+    /* Padding makes icon smaller as takes some width */
+    line-height: 1.5;
+}
+
+.intro ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: right;
+    /* Stops overflowing out of page */
+    margin: 0% 5% 0% 0%;
+}
+
+.intro ul li {
+    background-color: rgb(59, 171, 246);
+    border-radius: 50px;
+    padding: 5% 10% 5% 10%;
+    color: white;
+    font-size: 2rem;
+}
+
+.body {
+    display: grid;
+    grid-template: 1fr 1fr / 5fr 2fr;
+    gap: 3% 2%;
+    font-size: 2rem;
+    overflow: scroll;
+    /* In case screen size overflows projects */
+    /* --grandparent-width: 100%;
+    --grandparent-height: 100%; */
+    /* Way to standardize margin/padding? */
+}
+
+.body .projects {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / span 2;
+    padding: 3% 2% 3% 2%;
+}
+
+.body .projects .title {
+    margin: 0% 0% 1rem 0%;
+}
+
+.body .projects .card_grid {
+    flex: 1;
+    /* These go on the item that is supposed to grow, not parent */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2%;
+}
+
+.body .projects .card_grid .card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #fdb37e  0%, #fdb37e 3%, white 3%, white 100%);
+    /* Creates regions for orange line, 0 for transparent color */
+    border-radius: 20px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 10px rgb(145, 145, 145);
+}
+
+.card .text {
+    margin-left: 5%;
+    margin-top: 7%;
+}
+
+.card .icons {
+    width: 100%;
+    height: 10%;
+    /* Need to set width to cover whole width */
+    text-align: right;
+    margin-bottom: 2%;
+}
+
+.card .icons svg {
+    width: 10%;
+    /* Make sure both width and height 10% of card */
+    margin-right: 3%;
+}
+
+.body .announcements {
+    display: flex;
+    flex-direction: column;
+    padding: calc(3% * 5 / 2) 5% calc(3% * 5 / 2) 5%;
+    /* 5/2 project div as this div has 2/5 dimensions */
+        /* Need to do for both dimesions as the vertical padding relative to horizontal */
+}
+
+.body .announcements .title {
+    margin: 0% 0% 1rem 0%;
+}
+
+.body .announcements .announcement_list {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    height: 100%;
+    /* Same as card */
+    box-shadow: 5px 5px 10px rgb(145, 145, 145);
+}
+
+.body .announcements .announcement_list div {
+    margin: 0% 0% 1% 0%;
+}
+
+.body .trending {
+    display: flex;
+    flex-direction: column;
+    padding: calc(3% * 5 / 2) 5% calc(3% * 5 / 2) 5%;
+    /* 5/2 project div as this div has 2/5 dimensions */
+        /* Need to do for both dimesions as the vertical padding relative to horizontal */
+}
+
+.body .trending .title {
+    margin: 0% 0% 1% 0%;
+}
+
+.body .trending .trending_list {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 5px 5px 10px rgb(145, 145, 145);
+}
+
+.body .trending .trending_list .item {
+    display: flex;
+}
+
+.body .trending .trending_list .item svg {
+    width: 10%;
+    margin-right: 3%;
+}
+
+/* .search form label, .search form input {
+    flex: 1 0 100%;
+    // Prevent align-items: center from shrinking items 
+} */
