@@ -1,0 +1,18 @@
+.table {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 600px;
+    width: 600px;
+}
+
+.table .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid black;
+    font-size: 10rem;
+}
+
+.turn {
+    font-size: 5rem;
+}

@@ -1,0 +1,11 @@
+body .books{
+    display:grid;
+    grid-template: repeat(5, 10vh) / repeat(5, 1fr);
+}
+body .books div{
+    padding: 3%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    border: solid black;
+}

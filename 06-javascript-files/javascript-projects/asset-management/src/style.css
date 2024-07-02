@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'example-font';
+    src: url('./FortuneCityOutline.woff2') format('woff2');
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: example-font;
+  }

@@ -1,0 +1,19 @@
+Library:
+- Reviewed a lot of the JS syntax and functions
+  - querySelector(), addEventListener("click", () => ...)
+- Learned about arrow functions () =>, easy way to make implicit functions without defining on outside
+- Used dialog modals
+  - .showModal() and .close() to show/hide
+  - They pop up in middle of screen
+  - Use event.preventDefault(); to stop sending data to server from button submit
+    - This prevents default action of event
+  - To access input values, use document.getElementById('author').value, id="author" for that input element
+  - document.querySelector('input[name="read"]:checked').value is psuedoclass for radio button to get value
+
+- Can not add an event listener to things that have not yet been declared, if do it at beginning nothing happens
+  - Add when first created
+
+- Can not use this.parentElement because arrow function used
+  - Arrow uses surrounding context (function?) rather than element triggering event as "this"
+
+- .forEach() loop, use (book, index), () => ... to get index of element
