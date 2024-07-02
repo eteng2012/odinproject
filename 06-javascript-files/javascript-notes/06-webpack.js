@@ -67,3 +67,49 @@
     // 1. npm install --save-dev html-webpack-plugin
     // 2. Go to webpack config, import html-webpack-plugin
         // Add node called plugins, take in array and use new HtmlWebpackPlugin()
+
+
+
+// Webpack Development
+
+    // Set development environment to make things easier
+    // THESE TOOLS ONLY FOR DEVELOPMENT, NOT PRODUCTION
+
+    // Source Maps
+        // When bundling source code, can be difficult to track down errors to original location
+        // Source maps map compiled code to original source code
+        // devtool: 'inline-source-map' is an example of one 
+
+    // Auto Compile Code when Changes
+        // 1. Watch Mode
+            // In scripts: "watch": "webpack --watch",
+                // Watches files for changes, ONLY APPLIED WHEN PAGE RELOADED
+        // 2. webpack-dev-server (best)
+            // npm install --save-dev webpack-dev-server
+            // Add to module.exports: 
+                // devServer: {
+                //     static: './dist',
+                // },
+                // optimization: {
+                //     runtimeChunk: 'single',
+                // },
+            // Optimization used because more than one entry point
+            // dev-server does not write output files, it instead keeps bundle files in memory, 
+                // serves them as if they were real files
+
+            // IF USING HTML-plugin, NEED TO ADD .html TO WATCHED FILES
+                // P t: watchFiles: ['src/*.html'], in devServer to watch for changes in index.html in src
+        // 3. webpack-dev-middleware, explore later when using Express server
+
+
+
+// Webpack Production
+
+    // Development = strong source mapping, localhost server with live reloading
+    // Production = minified bundles, light weight source maps, optimized assets for load time
+    // Therefore, SEPARATE WEBPACK CONFIGS for each environment
+    // However, use common config for DRY
+        // Use webpack-merge to merge config
+            // npm install --save-dev webpack-merge
+            // Make different webpack._.js files: common, dev, prod. Use merge
+            // Change scripts in package.json
