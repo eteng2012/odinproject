@@ -112,4 +112,20 @@
         // Use webpack-merge to merge config
             // npm install --save-dev webpack-merge
             // Make different webpack._.js files: common, dev, prod. Use merge
-            // Change scripts in package.json
+            // Change scripts in package.json (this is because no webpack.config.js, so set manually)
+    // Specifying mode changes how much optimization/logging/testing libraries do
+        // Can check mode in .js source file with string variable: process.env.NODE_ENV
+
+    // Good to have source map enabled in prod, useful for debug/benchmarking
+        // However, use: source-map instead of inline-source-map, for performance
+
+    // MINIMIZE CSS FOR PROD
+
+
+
+// Some other features to look at for webpack include:
+    // Code Splitting = split code into bundles, loaded on demand or in parallel
+        // Controls resource/load priority
+    // Tree Shaking = dead-code elimination
+    // Lazy Loading = on-demand loading, split code at logical breakpoints, load when user did something to need code
+    
